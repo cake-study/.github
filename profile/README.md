@@ -1,7 +1,13 @@
 # Cake Study
 
 "Cake Study" shows how to integrate automated tests in different languages in frameworks with the
-[Qase TMS](https://qase.io).
+[Qase TMS](https://qase.io):
+
+* [Python + Pytest](https://github.com/cake-study/python)
+* [JavaScript + Jest](https://github.com/cake-study/javascript)
+* [Java + JUnit5](https://github.com/cake-study/java)
+
+## Make a cake!
 
 All test examples use the same story: making a cake. There is an implementation of the Cake class and tests that check its behavior.
 
