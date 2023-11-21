@@ -3,7 +3,7 @@
 "Cake Study" shows how to integrate automated tests in different languages in frameworks with the
 [Qase TMS](https://qase.io).
 
-All test examples use the same story: making a cake. There is an implementation of the Cake class and tests that check it's behavior.
+All test examples use the same story: making a cake. There is an implementation of the Cake class and tests that check its behavior.
 
 Making a cake takes several steps:
 
