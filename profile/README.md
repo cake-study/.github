@@ -3,19 +3,41 @@
 "Cake Study" shows how to integrate automated tests in different languages in frameworks with the
 [Qase TMS](https://qase.io).
 
-## Making Cakes
+All test examples use the same story: making a cake. There is an implementation of the Cake class and tests that check it's behavior.
 
-All tests examples use the same object: a cake.
+Making a cake takes several steps:
 
-*   `shake()`: Transitions an "uncooked" cake to "raw". Has no effect on a "raw", "baked", or "taken" cake. Throws a special message and an exception for a "burned" cake.
-*   `bake()`: Transitions a "raw" cake to "baked". Transitions a "baked" cake to "burned" (error state). Throws an exception if attempted on an "uncooked" or "burned" cake.
-*   `take()`: Transitions a "baked" cake to "taken". Throws an exception if attempted on cakes in any other state.
-*   `state()`: Returns the current state of the cake.
+1. Get some uncooked ingredients for a new cake. 
+1. Shake them well to make a raw cake.
+1. Bake the cake. Now it's ready! 
+1. Take the cake home.
 
 
-A cake has the following states:
+```
+Shake it, bake it, take it, taste it;
+Our cakes are never over.
+```
+
+## Detailed requirements
+
+Implementation and testing require a detailed description of states of a Cake object and transitions between them.
+
+A cake has the following states: 
+
 *   Uncooked (initial state)
 *   Raw (after shaking)
 *   Baked (after baking)
 *   Taken (after being taken home)
-*   Burned (error state after double baking)
+*   Burned (error state after baking too much)
+
+There are the following transitions between states:
+
+* Constructor should create an "uncooked" cake. 
+*  `shake()` changes an "uncooked" cake to "raw". Has no effect on a "raw", "baked", or "taken" cake.
+* `bake()` makes "raw" cake "baked". Baking an already "baked" cake should make it "burned".
+* `take()` turns a "baked" cake into "taken".
+
+
+There should be a special method or property for checking the state of a Cake: `cake.state()` or `cake.state`.
+
+
